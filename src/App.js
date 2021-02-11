@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import UsersList from './Users/UsersList'
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    let users = [
+        { id: 1, firstName: "John", lastName: "Doe", age: 24, job: "Developer"},
+        { id: 2, firstName: "Kate", lastName: "Reton", age: 22, job: "Chef"},
+        { id: 3, firstName: "Melissa", lastName: "Lout", age: 41, job: "Developer"},
+        { id: 4, firstName: "Ann", lastName: "Willington", age: 23, job: "Driver"},
+        { id: 5, firstName: "Michel", lastName: "Plank", age: 55, job: "Developer"},
+        { id: 6, firstName: "Bob", lastName: "Palanski", age: 32, job: "Waiter"},
+        { id: 7, firstName: "Jack", lastName: "Daniels", age: 23, job: "Developer"},
+        { id: 8, firstName: "Poul", lastName: "Torn", age: 65, job: "Cashier"},
+    ]
+
+
+    return (
+        <div className='wrapper'>
+            <h1> Users:</h1>
+            < UsersList users={users}/>
+        </div>
+    );
 }
 
 export default App;
